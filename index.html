@@ -1,5 +1,11 @@
+<?php
+if(isset($_GET[‘comment’])){
+$comment = $_GET[‘comment’];
+echo $comment;
+}
+?>
 <!DOCTYPE html>
-<html>
+<html lang = “ja”>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
@@ -30,6 +36,11 @@
 <br><br><br><br><a href="https://florr.io/" class="button01">テストURL</a>
 <br><br>
 <textarea rows="20" cols="60">お前、とりあえずflorr.ioやれ。</textarea>
+    <h1>フォームデータの送信</h1>
+<form action = “index.php” method = “GET”>
+<input type = “text” name =“comment/“><br/>
+<input type = “submit” value =“送信/“>
+</form>
     <form action="sample.php" method="post">
   <input type="textarea" name="confirm" value="">
   <input type="submit" value="送信">
